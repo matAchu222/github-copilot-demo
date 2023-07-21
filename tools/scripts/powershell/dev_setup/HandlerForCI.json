@@ -1,0 +1,50 @@
+{
+    "subfolders": [
+        {
+            "name": "Powershell",
+            "allowed_file_types": [
+                ".ps1",
+                ".psm1",
+                ".psd1"
+            ],
+            "scripts": [
+                {
+                    "name": "Invoke-PwshPSScriptAnalyzer.ps1",
+                    "parameters": []
+                }
+            ]
+        },
+        {
+            "name": "Python",
+            "allowed_file_types": [
+                ".py"
+            ],
+            "scripts": [
+                {
+                    "name": "Invoke-PythonFormatterBlack.ps1",
+                    "parameters": []
+                },
+                {
+                    "name": "Invoke-PythonLinterPyLint.ps1",
+                    "parameters": []
+                },
+                {
+                    "name": "Invoke-PythonSortingIsort.ps1",
+                    "parameters": []
+                }
+            ]
+        },
+        {
+            "name": "Terraform",
+            "allowed_file_types": [
+                ".tf"
+            ],
+            "scripts": [
+                {
+                    "name": "Invoke-TerraformFormat.ps1",
+                    "parameters": []
+                }
+            ]
+        }
+    ]
+}

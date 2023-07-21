@@ -1,0 +1,48 @@
+{
+    "name": "Github-Copilot-Demo",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/azure-cli:1": {
+            "installBicep": true,
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/powershell:1": {
+            "version": "latest",
+            "modules": "Az,Az.Tools.Predictor,PSScriptAnalyzer"
+        },
+        "ghcr.io/devcontainers/features/terraform:1": {
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode-remote.vscode-remote-extensionpack",
+                "ms-vscode-remote.remote-containers",
+                "ms-vscode-remote.remote-wsl",
+                "ms-vscode.azure-account",
+                "ms-vscode.azurecli",
+                "ms-vscode.powershell",
+                "ms-vsliveshare.vsliveshare",
+                "ms-azuretools.vscode-docker",
+                "ms-azuretools.azure-dev",
+                "ms-azuretools.vscode-azureresourcegroups",
+                "ms-azuretools.vscode-azurestorage",
+                "ms-azuretools.vscode-azurefunctions",
+                "ms-python.python",
+                "msazurermtools.azurerm-vscode-tools",
+                "azurite.azurite",
+                "github.vscode-github-actions",
+                "GitHub.copilot",
+                "GitHub.copilot-labs",
+                "GitHub.copilot-chat"
+            ]
+        }
+    },
+    "postCreateCommand": {
+        "InstallPythonModules": "pip install pylint black isort",
+        "InstallGitHooks": "pwsh.exe tools\\scripts\\powershell\\dev_setup\\Invoke-InstallGitHooks.ps1"
+    }
+}
